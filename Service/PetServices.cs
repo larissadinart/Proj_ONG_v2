@@ -4,6 +4,7 @@ using Habanero.DB;
 using Models;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using Models.BancoModel;
 
 namespace Service
 {
@@ -13,7 +14,7 @@ namespace Service
 
         public PetServices()
         {
-            _conexao = DatabaseConfig.GetConexao();
+            _conexao = BancoConfig.GetConexao();
         }
 
         public bool InsertPet(Pet pet)

@@ -12,7 +12,6 @@ namespace Interfaces
         List<Pet> GetAll();
         public bool InsertPet(Pet pet);
         public bool DeletePet(Pet pet);
-        public bool UpdatePet(Pet pet);
     }
 }
 
