@@ -1,45 +1,48 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using Dapper;
-using Interfaces;
 using Models;
 using Models.BancoModel;
+using Service.Interfaces;
 
 namespace Service
 {
-    public class AdotanteServices
+    public class AdocaoService
     {
-        public class AdotanteService : IAdotanteService
+        public class AdocaoServices : IAdocaoServices
         {
             private string _conexao;
 
-            public AdotanteService()
+            public AdocaoServices()
             {
                 _conexao = BancoConfig.GetConexao();
             }
 
-            public bool DeleteAdotante(Adotante adotante)
+            public bool DeleteAdocao(Adocao adocao)
             {
                 using (var bd = new SqlConnection(_conexao))
                 {
                     bd.Open();
-                    bd.Execute(Pet.DELETE, adotante);
+                    bd.Execute(Adocao.DELETE, adocao);
                     return true;
                 }
             }
-            public List<Adotante> GetAll()
+            public List<Adocao> GetAll()
             {
                 using (var db = new SqlConnection(_conexao))
                 {
                     db.Open();
-                    var adotantes = db.Query<Adotante>(Adotante.SELECT);
-                    return (List<Adotante>)adotantes;
+                    var adotantes = db.Query<Adocao>(Adocao.SELECT);
+                    return (List<Adocao>)adotantes;
                 }
             }
 
 
-            public bool InsertAdotante(Adotante adotante)
+            public bool InsertAdocao(Adocao adotante)
             {
                 using (var bd = new SqlConnection(_conexao))
                 {

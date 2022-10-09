@@ -15,7 +15,7 @@ namespace Controllers
             _petServices = new PetServices();
         }
 
-        public bool InsertAnimal(Pet pet)
+        public bool InsertPet(Pet pet)
         {
             return _petServices.InsertPet(pet);
         }

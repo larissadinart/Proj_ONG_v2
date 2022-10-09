@@ -1,11 +1,10 @@
 ﻿using System.Collections.Generic;
-using Interfaces;
 using Models;
 using Service;
 
 namespace Controllers
 {
-    internal class AdotanteControllers
+    public class AdotanteControllers
     {
         public class AdotanteController
         {

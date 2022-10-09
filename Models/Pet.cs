@@ -13,8 +13,15 @@ namespace Models
         public string Raca { get; set; }
         public string Sexo { get; set; }
         public string Nome { get; set; }
-        public Adotante adotante { get; set; }
 
+        public Pet(string familia,string  raca,string sexo,string nome)
+        {
+            this.Nome = nome;   
+            this.Familia = familia;
+            this.Raca = raca;   
+            this.Sexo = sexo;   
+
+        }
         public override string ToString()
         {
             return $"CHIP: {Chip}\nNome: {Nome}\nFamilia: {Familia}\nRaça: {Raca}\nSexo: {Sexo}\n";

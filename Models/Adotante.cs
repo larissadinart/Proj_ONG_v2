@@ -23,6 +23,18 @@ namespace Models
         public string Cidade { get; set; }
         public string Telefone { get; set; }
 
+        public Adotante(string cpf, string nome,DateTime data,string sx, string logradouro,int num,string bairro,string cidade,string tel)
+        {
+            this.Cpf = Cpf;
+            this.Nome = Nome;
+            this.Data_Nasc = data;
+            this.Sexo = sx;
+            this.Logradouro = logradouro;   
+            this.Numero = num;  
+            this.Bairro = bairro;
+            this.Cidade = cidade;
+            this.Telefone = Telefone;
+        }
         public override string ToString()
         {
             return $"CPF: {Cpf}\nNome: {Nome}\nData_Nasc: {Data_Nasc.ToShortDateString()}\nSexo: {Sexo}\nEndereço: {Logradouro},{Numero}, {Bairro}, {Cidade}\n";
