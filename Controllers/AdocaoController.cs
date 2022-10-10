@@ -10,18 +10,18 @@ namespace Controllers
 {
     public class AdocaoController
     {
-        public class AdotanteController
+        public class AdocapController
         {
             private AdocaoServices _adocaoServices;
 
-            public AdotanteController()
+            public void AdocaoController()
             {
                 _adocaoServices = new AdocaoServices();
             }
 
-            public bool InsertAdotante(Adocao adocao)
+            public bool InsertAdocao(Adocao adocao)
             {
-                return _adocaoServices.InsertAdotante(adocao);
+                return _adocaoServices.InsertAdocao(adocao);
             }
 
             public List<Adocao> GetAll()
